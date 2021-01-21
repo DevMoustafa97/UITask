@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/results.css">
+    <title>Travells</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="navbar-brand">Travells</div>
+                <div class="d-none d-md-block">
+                    <ul>
+                        <li>
+                            <a href="#" class="active">Home<span class=" sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">More</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-btns d-none d-md-block">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Signup</a>
+                </div>
+                <i class="fas fa-bars d-md-none" id="mobile-menu-icon"></i>
+            </nav>
+            <form class="d-none d-lg-flex justify-content-start align-items-center mt-4">
+                <div class="form-element" id="from">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text">
+                </div>
+                <div class="form-element" id="to">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text">
+                </div>
+                <div class="form-element">
+                    <!-- <i class="fas fa-calendar-week"></i> -->
+                    <input type="date">
+                </div>
+                <div class="form-element">
+                    <!-- <i class="fas fa-calendar-week"></i> -->
+                    <input type="date">
+                </div>
+                <div class="form-element">
+                    <i class="fas fa-user"></i>
+                    <input type="number">
+                </div>
+                <div class="form-element" class="search">
+                    <button class="search-btn"><i class="fas fa-search"></i>Search</button>
+                </div>
+            </form>
+            <!-- dropdowns -->
+            <div class="dropdowns mt-5 mx-auto d-flex d-lg-none align-items-center justify-content-between">
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-change" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Change
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </header>
+        <!-- end Header -->
+    <main>
+        <div class="row m-0">
+            <aside class="mt-2 p-4 col-sm-3 offset-sm-1 d-none d-lg-block align-self-start">
+                <h4>Filter Your Results</h4>
+                    <div>
+                        <h6>Stops</h6>
+                        <div>
+                            <input type="checkbox" name="stops" id="onestop"/>
+                            <label for="onestop">1 stop</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="stops" id="plusonestop"/>
+                            <label for="plusonestop">+1 stop</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h6>Airlines</h6>
+                        <div>
+                            <input type="checkbox" id="emraits">
+                            <label for="emraits">Flyemraits</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dubai">
+                            <label for="dubai">Flydubai</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="egy">
+                            <label for="egy">Egyptair</label>
+                        </div>
+                    </div>
+                    <div>
+                        <h6>Price</h6>
+                        <div>
+                            <p>From: <span id="demo"></span></p>
+                            <input type="range" min="3500" max="50000" value="50" class="slider" id="myRange">
+                        </div>
+                        <div>
+                            <p>To: <span id="demo2"></span></p>
+                            <input type="range" min="3500" max="50000" value="50" class="slider" id="myRange2">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <button>Clear All Filters</button>
+                    </div>
+            </aside>
+            <section class="col mx-auto col-lg-8 d-flex align-items-center justify-content-start flex-column">
+                <!-- Result -->
+                <div class="d-flex flex-column flex-sm-row result my-2">
+                    <div class="col-12 col-sm-9 align-items-center justify-content-center flex-column">
+                        <div class="row">
+                            <div
+                                class="mt-2 col-12 col-sm-3 d-flex align-items-center justify-content-center flex-column">
+                                <img src="./assets/images/flydubai.png" alt="">
+                                <p>Flydubai</p>
+                            </div>
+                            <div class="row m-0 col-12 col-sm-9 d-flex align-items-center justify-content-between">
+                                <div class="col-3">
+                                    <div class="text-right">
+                                        <p>3:35<sub>bm</sub></p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p>HBE</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                                    <p class="m-0">14h:45m</p>
+                                    <div class="d-flex align-items-center">
+                                        <svg width="104" height="3" viewBox="0 0 104 3" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="1.5" x2="104" y2="1.5" stroke="#5D55CF" stroke-width="3" />
+                                        </svg>
+                                        <svg class="d-block mx-1" width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="3.5" cy="3.5" r="3.5" fill="#FFB039" />
+                                        </svg>
+                                        <svg width="104" height="3" viewBox="0 0 104 3" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="1.5" x2="104" y2="1.5" stroke="#5D55CF" stroke-width="3" />
+                                        </svg>
+                                    </div>
+                                    <p>1 stop</p>
+                                </div>
+                                <div class="col-3">
+                                    <div>
+                                        <p>5:15<sub>am</sub></p>
+                                    </div>
+                                    <div>
+                                        <p>CDG</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div
+                                class="mt-2 col-12 col-sm-3 d-flex align-items-center justify-content-center flex-column">
+                                <img src="./assets/images/flyemirates.png" alt="">
+                                <p>Flyemirates</p>
+                            </div>
+                            <div class="row m-0 col-12 col-sm-9 d-flex align-items-center justify-content-between">
+                                <div class="col-3">
+                                    <div class="text-right">
+                                        <p>3:35<sub>bm</sub></p>
+                                    </div>
+                                    <div class="text-right">HBE</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                                    <p class="m-0">14h:45m</p>
+                                    <div class="d-flex align-items-center">
+                                        <svg width="104" height="3" viewBox="0 0 104 3" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="1.5" x2="104" y2="1.5" stroke="#5D55CF" stroke-width="3" />
+                                        </svg>
+                                        <svg class="d-block mx-1" width="7" height="7" viewBox="0 0 7 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="3.5" cy="3.5" r="3.5" fill="#FFB039" />
+                                        </svg>
+                                        <svg width="104" height="3" viewBox="0 0 104 3" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line y1="1.5" x2="104" y2="1.5" stroke="#5D55CF" stroke-width="3" />
+                                        </svg>
+                                    </div>
+                                    <p>1 stop</p>
+                                </div>
+                                <div class="col-3">
+                                    <div>
+                                        <p>5:15<sub>am</sub></p>
+                                    </div>
+                                    <div>
+                                        <p>CDG</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 d-flex align-items-center justify-content-center flex-column">
+                        <p class="price">$460.80</p>
+                        <button class="book-btn mb-4">Book Now</button>
+                    </div>
+                </div>
+                <!-- End Result -->
+            </section>
+        </div>
+    </main>
+    <!-- end main content -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var slider = document.getElementById("myRange");
+        var slider2 = document.getElementById("myRange2");
+
+        var output = document.getElementById("demo");
+        var output2 = document.getElementById("demo2");
+        
+        output.innerHTML = slider.value;
+        output2.innerHTML = slider2.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+        slider2.oninput = function() {
+          output2.innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>

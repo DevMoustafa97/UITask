@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Travells</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="d-flex justify-content-between align-items-center">
+                <div class="navbar-brand">Travells</div>
+                <div class="d-none d-md-block">
+                    <ul>
+                        <li>
+                            <a href="#" class="active">Home<span class=" sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-btns d-none d-md-block">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="signup">Signup</a>
+                </div>
+                <i class="fas fa-bars d-md-none" id="mobile-menu-icon"></i>
+            </nav>
+        </div>
+    </header>
+    <!-- end Header -->
+    <!-- main content -->
+    <main>
+        <div class="container">
+            <h1 class="mt-5 pt-4">Compare and Book Cheap Flights on Over 600 Airlines</h1>
+        </div>
+        <div class="container">	
+        <div class="search-pannel">
+                <ul class="nav nav-pills">
+                    <li>
+                        <a href="#1a" data-toggle="tab" class="active">Round Trip</a>
+                    </li>
+                    <li>
+                        <a href="#2a" data-toggle="tab">One Way</a>
+                    </li>
+                    <li>
+                        <a href="#3a" data-toggle="tab">Multi-City</a>
+                    </li>
+                </ul>
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="1a">
+                          <form class="row">
+                              <div class="container">
+                                  <div class="row">
+                                        <div class="col-md-6" id="from">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-md-6" id="to">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                  <div class="row">
+                                          <div class="col col-md-3" id="from">
+                                                <i class="fas fa-calendar-week"></i>
+                                              <input type="date">
+                                          </div>
+                                          <div class="col col-md-3" id="to">
+                                            <i class="fas fa-calendar-week"></i>
+                                              <input type="date">
+                                          </div>
+                                      
+                                        <div class="col col-12 col-md-4" id="to">
+                                            <i class="fas fa-user"></i>
+                                            <input type="number">
+                                        </div>
+                                    </div>
+                                    <div class="search">           
+                                        <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+                                    </div>
+                                </div>
+                          </form>
+                        </div>
+                        <div class="tab-pane" id="2a">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam incidunt, consequatur quas quo laudantium debitis quibusdam repudiandae aliquam repellat voluptates quae tenetur doloribus commodi a porro molestiae quisquam! Possimus, a.</p>
+                        </div>
+                        <div class="tab-pane" id="3a">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam incidunt, consequatur quas quo laudantium debitis quibusdam repudiandae aliquam repellat voluptates quae tenetur doloribus commodi a porro molestiae quisquam! Possimus, a.</p>
+                        </div>
+                          <div class="tab-pane" id="4a">
+                          <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- end main content -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
